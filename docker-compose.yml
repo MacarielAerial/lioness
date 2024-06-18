@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  # Replace placeholder service name
+  lioness:
+    build:
+      context: .
+      # docker-compose file is only used in dev
+      target: dev
+      dockerfile: Dockerfile
+    # Replace placeholder service name
+    image: lioness-dev
+    # Replace placeholder service name
+    container_name: lioness-server
+    ports:
+      - '5050:8080'
