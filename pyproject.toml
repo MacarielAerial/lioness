@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytube-lioness"
-version = "0.0.0"
+version = "0.0.1"
 description = "Downloads youtube video and audio streams of a URL before combing them into a single file"
 authors = ["Yifei Yu"]
 readme = "README.md"
