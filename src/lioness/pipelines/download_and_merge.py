@@ -4,8 +4,6 @@ if __name__ == "__main__":
     import argparse
     from pathlib import Path
 
-    from pydantic_core import Url
-
     from lioness.nodes.project_logging import default_logging
 
     default_logging()
@@ -17,7 +15,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-vu",
         "--video_url",
-        type=Url,
+        type=str,
         required=True,
         help="Youtube video URL for download",
     )
