@@ -34,7 +34,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Publish with devcontainer
+      - name: Mint token
+        id: mint
+        uses: tschm/token-mint-action@v1.0.3
+
+      - name: Build with devcontainer
         uses: devcontainers/ci@v0.3
         with:
           runCmd: |
@@ -42,4 +46,4 @@ jobs:
             poetry version $tag
             poetry install
             poetry build
-            poetry publish
+            poetry publish -u __token__ -p '${{ steps.mint.outputs.api-token }}'
