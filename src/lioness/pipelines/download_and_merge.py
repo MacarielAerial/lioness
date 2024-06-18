@@ -16,7 +16,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-vu",
-        "--path_video_url",
+        "--video_url",
         type=Url,
         required=True,
         help="Youtube video URL for download",
