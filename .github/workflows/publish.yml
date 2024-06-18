@@ -25,6 +25,8 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     needs: test
     if: github.ref_type == 'tag'
 
