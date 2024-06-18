@@ -42,8 +42,8 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           runCmd: |
-            echo ${GITHUB_REF/refs\/tags\//}
-            tag=${GITHUB_REF/refs\/tags\//}
+            echo ${{ github.ref_name }}
+            tag=${{ github.ref_name }}
             poetry version $tag
             poetry install
             poetry build
