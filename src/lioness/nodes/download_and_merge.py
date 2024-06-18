@@ -53,6 +53,10 @@ def _download_and_merge(
     # Define the output file path
     output_file = path_dir_combined / video_filename
 
+    # Create parent directories if not exist already
+    logger.info(f'The following directory would be created if not already exist:\n{output_file.parent}')
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
     # Merge video and audio using ffmpeg
     ffmpeg_command = [
         "ffmpeg",
