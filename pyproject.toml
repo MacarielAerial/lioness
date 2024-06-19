@@ -18,6 +18,7 @@ orjson = "^3.10.1"
 dacite = "^1.8.1"
 pydantic = "^2.7.0"
 pytube = "^15.0.0"
+streamlit = "^1.35.0"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.13.2"
